@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    <meta charset="UTF-8"> 
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Piedra papel o tijera</title>
@@ -17,13 +17,13 @@
         jugador= prompt(" Elige : 1 para piedra , 2 para papel y 3 para tijera")
         // alert("Elegiste " + jugador)
         if(jugador==1){
-            alert("Elegiste 1 que es 🪨🪨")
+            alert("Elegiste 🪨🪨")
         }
         else if(jugador==2){
-            alert("Elegiste 2 que es📄📄")
+            alert("Elegiste 📄📄")
         }
         else if (jugador==3){
-            alert("elegiste 3 que es ✂️✂️")
+            alert("elegiste ✂️✂️")
         }
 
         else{ 
@@ -38,7 +38,8 @@
         else if (pc==3){
             alert("Pc eleije ✂️✂️")
         }
-        //COMBATE
+
+        /*COMBATE
         if(pc==jugador){
             alert("Hubo un empate")
         }
@@ -52,6 +53,15 @@
         }
         else{ 
             alert("Perdiste")
+        }
+        */
+
+        if (jugador==pc){
+            alert("EMPATE")
+         }else if((jugador==1 && pc==3) || (jugador==3 && pc==2) || (jugador==3 && pc==2)){
+        alert("GANASTE")
+        } else {
+        alert("PERDISTE")
         }
 
 
