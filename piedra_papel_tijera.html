@@ -40,6 +40,7 @@
         }
 
         /*COMBATE
+        Se hace por el metodo de if , un metodo mas largo pero llegamos a el mismo resultado que esperamos con una funcion.
         if(pc==jugador){
             alert("Hubo un empate")
         }
@@ -56,6 +57,7 @@
         }
         */
 
+        // Este es el metodo mas corto el cual damos como inicio a un if icnial dandole a entender a el pc que si el jugador y el pc quedan iguales == mande la alerta de empate , de igual forma el otro if es aquel que se encarga de establecer todas aquellas que ganamos , con el && quiere decir que es verdadero si se cumplen las dos funciones , y el || , mandara como respuesta para que entre a el if si una de ellas es verdadera , asi logramos optimizar el codigo , y como ultimo si no se cumple alguna quiere decir que perdimos la parte de else 
         if (jugador==pc){
             alert("EMPATE")
          }else if((jugador==1 && pc==3) || (jugador==3 && pc==2) || (jugador==3 && pc==2)){
