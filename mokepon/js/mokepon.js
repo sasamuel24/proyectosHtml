@@ -1,5 +1,7 @@
 let ataqueJugador   // VARIABLE GLOBAL, PARA QUE CADA FUNCION ENTREN
 let ataqueEnemigo
+let resultadoCombate
+
 function iniciarJuego(){
     let botonMascotaJugador = document.getElementById('boton-mascotas')
     botonMascotaJugador.addEventListener('click', seleccionarMacostaJugador)
@@ -25,7 +27,7 @@ function seleccionarMacostaJugador(){
 
 
     if(input1.checked){
-        alert("Seleccionaste a Hipodoge")
+        alert("Seleccionaste a Hipodoge como tu mascota")
         SpanMascotaJugador.innerHTML = 'Hipodoge'
     } else if(input2.checked){
         alert("Selccionaste a Capipepo como tu mascota")
@@ -43,7 +45,7 @@ function seleccionarMacostaJugador(){
         alert("Seleccionaste a Pydos como tu mascota")
         SpanMascotaJugador.innerHTML = 'Pydos'
     } else {
-        alert("Aun no has seleccionado tu mascota , SELECCIONALA CRACK")
+        alert("Aun no has seleccionado tu mascota , por favor seleccionar mascota")
         jugar= 0
     }
 
@@ -90,23 +92,17 @@ function aleatorio(min,max){
 }
 
 function ataqueFuego(){
-    let  spanAtaqueJuador = document.getElementById('ataque-jugador')
     ataqueJugador = 'FUEGO'
-    spanAtaqueJuador.innerHTML = 'FUEGO'
     seleccionarAtaqueEnemigo()
 }
 
 function  ataqueAgua(){
-    let spanAtaqueJuador = document.getElementById('ataque-jugador')
     ataqueJugador= 'AGUA'
-    spanAtaqueJuador.innerHTML = 'AGUA'
     seleccionarAtaqueEnemigo()
 }
 
 function ataqueTierra(){
-    let spanAtaqueJuador = document.getElementById('ataque-jugador')
     ataqueJugador= 'TIERRA'
-    spanAtaqueJuador.innerHTML = 'TIERRA'
     seleccionarAtaqueEnemigo()
 }
 
@@ -115,21 +111,39 @@ let min2= 1
 let max2= 3
 
 function seleccionarAtaqueEnemigo(){
-    let spanAtaqueEnemigo = document.getElementById('ataque-enemigo')
     let numeroAleatorio2 = aleatorio(min2,max2)
 
     if(numeroAleatorio2==1){
         ataqueEnemigo= 'FUEGO'
-        spanAtaqueEnemigo.innerHTML = 'FUEGO'
     } else if(numeroAleatorio2==2){
         ataqueEnemigo= 'AGUA'
-        spanAtaqueEnemigo.innerHTML = 'AGUA'
-    }else if(numeroAleatorio2==3){
+    } else if(numeroAleatorio2==3){
         ataqueEnemigo= 'TIERRA'
-        spanAtaqueEnemigo.innerHTML = 'TIERRA'
     }
 
+    combate()
 }
 
+function combate(){
+    if (ataqueJugador==ataqueEnemigo){
+        crearMensaje("EMPATE ❗")
+     } 
+     
+    else if((ataqueJugador== 'FUEGO'  && ataqueEnemigo=='TIERRA') || (ataqueJugador== 'AGUA' && ataqueEnemigo=='FUEGO') || (ataqueJugador=='TIERRA' && ataqueEnemigo=='AGUA')){
+        crearMensaje("GANASTE ✅")
+    } 
+    
+    else {
+        crearMensaje("PERDISTE ❌")
+    }
+}
+
+function crearMensaje(resultadoCombate){
+    let seccionMensajes = document.getElementById('mensajes')
+    let parrafo = document.createElement('p')
+    parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ' . La mascota del enemigo ataco con ' + ataqueEnemigo + ' ' + resultadoCombate
+
+    seccionMensajes.appendChild(parrafo)
+}
 
 window.addEventListener('load',iniciarJuego)
