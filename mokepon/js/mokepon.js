@@ -35,11 +35,7 @@ function seleccionarMacostaJugador(){
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'block'
-
-
-
-
-
+    
     let input1 =  document.getElementById('Hipodoge')
     let input2 = document.getElementById('Capipepo')
     let input3 = document.getElementById('Ratigueya')

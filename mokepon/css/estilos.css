@@ -1,0 +1,72 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+
+
+
+body {
+    background-image: url('https://cdn.pixabay.com/photo/2020/01/08/16/39/illustration-4750580_1280.jpg');
+    background-repeat: no-repeat;
+    background-attachment: fixed; /*iMAGEN ESTATICA*/
+    background-size: cover; /* IMPORTANTE ES AQUELLA QUE ME DA TODA LA IMAGEN EN EL RANGO DE LA WEB */ 
+    font-family: 'Roboto Mono', monospace;
+
+}
+.titulo-principal {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    font-size: 88px;
+    color: rgb(34, 34, 33);
+    width: 950px; /* ANCHO */
+    height: 120px; /* ALTO */
+    /* background-color: #ffffff;  COLOR DE FONDO */
+    margin: 15px;
+}
+
+.letra-elige-tu-mascota{
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+}
+
+#seleccionar-mascota {
+    display: flex; /*LLAMO A EL ATRIBUTO FLEXBOX */
+    justify-content: center;
+    flex-direction: column;
+    align-items: center; 
+
+}
+
+.tarjeta-de-mokepon {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    width: 120px;
+    height: 40px;
+    background-color: rgb(247, 249, 251);
+    padding: 10px;
+    box-sizing: border-box;
+    margin: 10px;
+    border: solid black;
+    border-radius: 15px;
+    
+}
+
+input {
+    display: block;
+    width: 1456px;
+    height: 16px;
+    margin: 5px;
+    border: black;
+}
+
+#boton-mascotas {
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    height: 24px;
+    width: 106px;
+    margin: 20px;
+    border-radius: 5px;
+    background-color: azure;
+}
+
+.tarjetas {
+    display: flex;
+    gap: 10px;
+}

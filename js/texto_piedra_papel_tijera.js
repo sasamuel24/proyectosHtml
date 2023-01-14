@@ -1,4 +1,4 @@
-document.write("<h2> Su resumen de juego es: <h2>")
-document.write("<h2> Usted gano: " + triunfos + " veces.<h2>")
-document.write("<h2> Usted perdio: " + perdidas + " veces.<h2>")
-document.write("<h2> Usted empato: " + empate + " veces.<h2>")
+document.write("<p> Su resumen de juego es: </p>")
+document.write("<p> Usted gano: " + triunfos + " veces.</p>")
+document.write("<p> Usted perdio: " + perdidas + " veces.</p>")
+document.write("<p> Usted empato: " + empate + " veces.</p>")

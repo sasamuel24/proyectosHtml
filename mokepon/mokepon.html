@@ -6,32 +6,31 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mokepon</title>
     <script src="js/mokepon.js"></script>
+    <link rel="stylesheet" href="css/estilos.css">
 </head>
 <body>
-    <h1>Mokepon !!!💧🔥🌱 </h1>
-
     <section id="seleccionar-mascota">
 
-        <h2>Elije a tu mascota:</h2>
+        <h1 class="titulo-principal">Mokepon !💧🔥🌱 </h1>
 
+        <h2 class="letra-elige-tu-mascota">Elije a tu mascota:</h2>
 
-        <label for="Hipodoge">Hipodoge</label>
+        <div clas="tarjetas">
+
+        <label class="tarjeta-de-mokepon" for="Hipodoge">
+            <p>Hipodoge</p>
+            <img src="" alt=""/>
+        </label>
         <input type="radio" name="mascota" id="Hipodoge" />
 
-        <label for="Capipepo">Capipepo</label>
+        <label  class="tarjeta-de-mokepon" for="Capipepo">Capipepo</label>
         <input type="radio" name="mascota" id="Capipepo"/>
 
-        <label for="Ratigueya">Ratigueya</label>
+        <label class="tarjeta-de-mokepon" for="Ratigueya">Ratigueya</label>
         <input type="radio" name="mascota" id="Ratigueya"/>
 
-        <label for="Langostelvis">Langostelvis</label>
-        <input type="radio" name="mascota" id="Langostelvis"/>
-
-        <label for="Tucapalma">Tucapalma</label>
-        <input type="radio" name="mascota" id="Tucapalma"/>
-
-        <label for="Pydos">Pydos</label>
-        <input type="radio" name="mascota" id="Pydos"/>
+        </div>
+        
 
 
         <button id="boton-mascotas">Seleccionar</button>
