@@ -9,7 +9,7 @@ function iniciarJuego(){
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
     sectionSeleccionarAtaque.style.display = 'none'
 
-    let sectionbtnReinicar = document.getElementById('reinicar')
+    let sectionbtnReinicar = document.getElementById('reiniciar')
     sectionbtnReinicar.style.display = 'none'
 
 
@@ -39,9 +39,6 @@ function seleccionarMacostaJugador(){
     let input1 =  document.getElementById('Hipodoge')
     let input2 = document.getElementById('Capipepo')
     let input3 = document.getElementById('Ratigueya')
-    let input4 = document.getElementById('Langostelvis')
-    let input5 = document.getElementById('Tucapalma')
-    let input6 = document.getElementById('Pydos')
     let SpanMascotaJugador = document.getElementById('mascota-jugador')
     let jugar = 1 
 
@@ -80,13 +77,8 @@ function seleccionarMacostaEnemigo(){
         SpanMascotaEnemigo.innerHTML = 'Capipepo'
     } else if(numeroAleatorio==3){
         SpanMascotaEnemigo.innerHTML = 'Ratigueya'
-    } else if(numeroAleatorio==4){
-        SpanMascotaEnemigo.innerHTML = 'Langostelvis'
-    } else if(numeroAleatorio==5){
-        SpanMascotaEnemigo.innerHTML = 'Tucapalma'
-    } else if(numeroAleatorio==6){
-        SpanMascotaEnemigo.innerHTML = 'Pydos'
-    }
+}
+
 }
 
 
@@ -154,37 +146,36 @@ function combate(){
 }
 
 function revisarVidas(){
-    let sectionResultadoJuego = document.getElementById('resultado-final')
-    let parrafoFinal = document.createElement('p')
+    let seccionMensajes = document.getElementById('resultado')
 
     if (vidasEnemigo == 0){
-        parrafoFinal.innerHTML = 'GANASTE!!!!!🎆🥳🎉🍾 EL COMBATE, FELICITACIONES'
-        sectionResultadoJuego.appendChild(parrafoFinal)
+        seccionMensajes.innerHTML = 'GANASTE!!!!!🎆🥳🎉🍾, FELICITACIONES'
         desabilitarBotones()
-        let sectionbtnReinicar = document.getElementById('reinicar')
+        let sectionbtnReinicar = document.getElementById('reiniciar')
         sectionbtnReinicar.style.display = 'block'
     } else if (vidasJugador== 0){
-        parrafoFinal.innerHTML = 'PERDISTE EL COMBATE😔💔🙍‍♂️ ,SIGUE INTENTANDO'
-        sectionResultadoJuego.appendChild(parrafoFinal)
+        seccionMensajes.innerHTML = 'PERDISTE EL COMBATE😔💔🙍‍♂️'
         desabilitarBotones()
-        let sectionbtnReinicar = document.getElementById('reinicar')
-        sectionbtnReinicar.style.display = 'block'
+        let sectionbtnReiniciar = document.getElementById('reiniciar')
+        sectionbtnReiniciar.style.display = 'block'
     }
 
 
 }
 
 function crearMensaje(resultadoCombate){
-    let seccionMensajes = document.getElementById('mensajes')
-    let parrafo = document.createElement('p')
-    parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ' . La mascota del enemigo ataco con ' + ataqueEnemigo + ' ' + resultadoCombate
+    let seccionMensajes = document.getElementById('resultado')
+    let ataquesJ = document.getElementById('ataques-j')
+    let ataquesE = document.getElementById('ataques-e')
 
-    seccionMensajes.appendChild(parrafo)
+    seccionMensajes.innerHTML = resultadoCombate
 
+    ataquesJ.innerHTML = ataqueJugador
 
+    ataquesE.innerHTML = ataqueEnemigo
 
-    
-
+    // let parrafo = document.createElement('p')
+    // parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ' . La mascota del enemigo ataco con ' + ataqueEnemigo + ' ' + resultadoCombate
 
 }
 

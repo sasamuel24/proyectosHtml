@@ -32,7 +32,7 @@ body {
 
 .letra-elige-tu-mascota{
     text-align: center;
-    font-family: 'Oswald', sans-serif;
+    font-family: 'Roboto Mono', monospace;
     margin: 25px;
 }
 
@@ -109,9 +109,31 @@ input {
     background-color: azure;
 }
 
-.css-mensaje {
+#mensajes { 
 
     font-family: 'Oswald', sans-serif;
-    
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 300px;
+    padding: 10px;
+    box-sizing: border-box;
+    background-color: rgb(6, 121, 125);
+    border-radius: 20px;
+}
+
+
+
+
+
+
+#boton-reiniciar {
+
+    font-family: 'Oswald', sans-serif;
+    border: none;
+    color: rgb(0, 7, 5);
+    background-color: rgb(6, 121, 125);
+
+   
 }
 
