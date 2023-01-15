@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono:wght@300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald&family=Roboto+Mono:wght@300&display=swap');
 
 
 
@@ -10,21 +10,6 @@ body {
     font-family: 'Roboto Mono', monospace;
 
 }
-.titulo-principal {
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    font-size: 88px;
-    color: rgb(34, 34, 33);
-    width: 950px; /* ANCHO */
-    height: 120px; /* ALTO */
-    /* background-color: #ffffff;  COLOR DE FONDO */
-    margin: 15px;
-}
-
-.letra-elige-tu-mascota{
-    text-align: center;
-    font-family: 'Roboto Mono', monospace;
-}
 
 #seleccionar-mascota {
     display: flex; /*LLAMO A EL ATRIBUTO FLEXBOX */
@@ -34,39 +19,99 @@ body {
 
 }
 
-.tarjeta-de-mokepon {
+.titulo-principal {
     text-align: center;
     font-family: 'Roboto Mono', monospace;
-    width: 120px;
-    height: 40px;
-    background-color: rgb(247, 249, 251);
-    padding: 10px;
-    box-sizing: border-box;
-    margin: 10px;
-    border: solid black;
-    border-radius: 15px;
-    
+    font-size: 88px;
+    color: rgb(34, 34, 33);
+    width: 2000px; /* ANCHO */
+    height: 120px; /* ALTO */
+    /* background-color: #ffffff;  COLOR DE FONDO */
+    margin: 15px;
 }
 
-input {
-    display: block;
-    width: 1456px;
-    height: 16px;
-    margin: 5px;
-    border: black;
-}
-
-#boton-mascotas {
+.letra-elige-tu-mascota{
     text-align: center;
-    font-family: 'Roboto Mono', monospace;
-    height: 24px;
-    width: 106px;
-    margin: 20px;
-    border-radius: 5px;
-    background-color: azure;
+    font-family: 'Oswald', sans-serif;
+    margin: 25px;
 }
 
 .tarjetas {
     display: flex;
-    gap: 10px;
+    gap: 5px;
 }
+
+.tarjeta-de-mokepon {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+
+    width: 200px;
+    height: 150px;
+    background-color: rgb(247, 249, 251);
+
+    padding: 10px;
+    box-sizing: border-box;
+
+    margin: 50px;
+    border: solid black;
+    border-radius: 25px;
+    color: black;
+}
+
+.tarjeta-de-mokepon img{
+    width: 80px;
+}
+
+input {
+    display: none;
+    width: 100px;
+    height: 20px;
+    margin: 1px;
+    border: black;
+}
+
+#boton-mascotas {
+
+    text-align: center;
+    font-family: 'Roboto Mono', monospace;
+    height: 54px;
+    width: 106px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: azure;
+
+}
+
+#seleccionar-ataque {
+    display: flex; /* EN JAVA TENIA UN BLOCK , ESTE NOS BLOQUEABA EL USO DE FLEX , TUVIMOS QUE QUITARLO Y DARLE A CONOCER A EL FLEX , NO ES NECESARIO COLOCARLO YA QUE ESTA EN JS , PERO LO COLOCO PARA NO OLVIDARME */
+    flex-direction: column;
+    align-items: center;
+}
+
+.btn-ataques {
+
+    font-family: 'Oswald', sans-serif;
+    text-align: center;
+    height: 54px;
+    width: 110px;
+    margin: 10px 15px 10px 15px;
+    padding: 10px;
+    box-sizing: border-box;
+    border-radius: 30px;
+    border-color: transparent;
+    background-color: azure;
+}
+
+.css-mensaje {
+
+    font-family: 'Oswald', sans-serif;
+    
+}
+

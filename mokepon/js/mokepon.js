@@ -34,7 +34,7 @@ function seleccionarMacostaJugador(){
     sectionSeleccionarMascota.style.display = 'none'
 
     let sectionSeleccionarAtaque = document.getElementById('seleccionar-ataque')
-    sectionSeleccionarAtaque.style.display = 'block'
+    sectionSeleccionarAtaque.style.display = 'flex'
     
     let input1 =  document.getElementById('Hipodoge')
     let input2 = document.getElementById('Capipepo')
@@ -47,21 +47,15 @@ function seleccionarMacostaJugador(){
 
 
     if(input1.checked){
-        alert("Seleccionaste a Hipodoge como tu mascota")
         SpanMascotaJugador.innerHTML = 'Hipodoge'
     } else if(input2.checked){
         SpanMascotaJugador.innerHTML = 'Capipepo'
     } else if(input3.checked){
         SpanMascotaJugador.innerHTML = 'Ratigueya'
-    } else if(input4.checked){
-        SpanMascotaJugador.innerHTML = 'Langostelvis'
-    } else if(input5.checked){
-        SpanMascotaJugador.innerHTML = 'Tucapalma'
-    }else if(input6.checked){
-        SpanMascotaJugador.innerHTML = 'Pydos'
     } else {
         alert("Aun no has seleccionado tu mascota , por favor seleccionar mascota")
-        jugar= 0
+        jugar = 0
+        reiniciarJuego()
     }
 
     if(jugar==1){
