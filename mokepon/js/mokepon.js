@@ -168,11 +168,12 @@ function crearMensaje(resultadoCombate){
     let ataquesJ = document.getElementById('ataques-j')
     let ataquesE = document.getElementById('ataques-e')
 
+
     seccionMensajes.innerHTML = resultadoCombate
-
     ataquesJ.innerHTML = ataqueJugador
-
     ataquesE.innerHTML = ataqueEnemigo
+
+
 
     // let parrafo = document.createElement('p')
     // parrafo.innerHTML = 'Tu mascota ataco con ' + ataqueJugador + ' . La mascota del enemigo ataco con ' + ataqueEnemigo + ' ' + resultadoCombate

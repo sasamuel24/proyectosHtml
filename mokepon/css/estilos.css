@@ -38,7 +38,7 @@ body {
 
 .tarjetas {
     display: flex;
-    gap: 5px;
+    gap: 50px;
 }
 
 .tarjeta-de-mokepon {
@@ -58,7 +58,7 @@ body {
     box-sizing: border-box;
 
     margin: 50px;
-    border: solid black;
+    border: 2px solid black;
     border-radius: 25px;
     color: black;
 }
@@ -69,10 +69,17 @@ body {
 
 input {
     display: none;
-    width: 100px;
-    height: 20px;
-    margin: 1px;
-    border: black;
+}
+
+input:checked + label{
+    background-color: #F0ECCF;
+
+    width: 200px;
+    height: 150px;
+
+    margin: 50px;
+    border: 2px solid black;
+    border-radius: 25px;
 }
 
 #boton-mascotas {
@@ -93,6 +100,7 @@ input {
     display: flex; /* EN JAVA TENIA UN BLOCK , ESTE NOS BLOQUEABA EL USO DE FLEX , TUVIMOS QUE QUITARLO Y DARLE A CONOCER A EL FLEX , NO ES NECESARIO COLOCARLO YA QUE ESTA EN JS , PERO LO COLOCO PARA NO OLVIDARME */
     flex-direction: column;
     align-items: center;
+    margin: 20px;
 }
 
 .btn-ataques {
@@ -101,7 +109,7 @@ input {
     text-align: center;
     height: 54px;
     width: 110px;
-    margin: 10px 15px 10px 15px;
+    margin: 50px 15px 10px 15px;
     padding: 10px;
     box-sizing: border-box;
     border-radius: 30px;
@@ -115,17 +123,13 @@ input {
     display: flex;
     align-items: center;
     flex-direction: column;
+    margin: 50px;
     width: 300px;
     padding: 10px;
     box-sizing: border-box;
     background-color: rgb(6, 121, 125);
     border-radius: 20px;
 }
-
-
-
-
-
 
 #boton-reiniciar {
 
@@ -136,4 +140,37 @@ input {
 
    
 }
+
+.ataques {
+    display: grid;
+    grid-template-columns: 150px 150px;
+    text-align: center;
+    margin: 20px;
+}
+
+@media (max-width: 1000px){
+    .tarjetas{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .titulo-principal{
+        display: flex;
+        justify-content: center;
+    }
+
+    .botones-ataques{
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.ataques-jugador , .ataques-enemigo{
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
 
